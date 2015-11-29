@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 20151129033840) do
   create_table "notes", force: :cascade do |t|
     t.string   "title"
     t.text     "note"
-    t.integer  "nppl_id"
+    t.integer  "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "notes", ["nppl_id"], name: "index_notes_on_nppl_id"
+  add_index "notes", ["book_id"], name: "index_notes_on_book_id"
 
   create_table "reviewers", force: :cascade do |t|
     t.string   "name"

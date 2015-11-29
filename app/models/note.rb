@@ -1,3 +1,3 @@
 class Note < ActiveRecord::Base
-  belongs_to :nppl
+  belongs_to :book
 end
