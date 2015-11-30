@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
       # reviewer_id
       redirect_to login_path unless session[:reviewer_id]
     end
+  
+    def logged_in?
+      session[:reviewer_id] # nil is false
+    end
+
+    def current_user
+      @current_user ||= Reviewer.find(session[:reviewer_id])
+    end
 end
