@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129033840) do
+ActiveRecord::Schema.define(version: 20151130030949) do
 
   create_table "books", force: :cascade do |t|
     t.string   "name"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 20151129033840) do
 
   create_table "reviewers", force: :cascade do |t|
     t.string   "name"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
